@@ -1,0 +1,5 @@
+__pycache__
+venv/
+.env
+# Ignore Alembic configuration file
+alembic.ini

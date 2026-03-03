@@ -1,0 +1,12 @@
+name: Build and Deploy code
+
+on: [push, pull_request]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest   ### ubuntu is os we provide any os where we want to run
+    steps:
+      - name: pulling  git repo
+        uses: action/checkout@v2
+      - name: say hi to Aman
+        run: echo "Hello Aman"
