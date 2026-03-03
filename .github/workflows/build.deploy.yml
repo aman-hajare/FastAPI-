@@ -9,13 +9,13 @@ jobs:
       - name: pulling  git repo
         uses: actions/checkout@v4
       - name: Install python version 3.11
-        run: actions/setup-python@v4
+        uses: actions/setup-python@v4
         with:
           python-version: "3.11"
       - name: update pip
         run: pyhon -m pip install --upgrade pip
       - name: install all dependencies
         run: pip install -r requirements.txt
-        
+
 
       
