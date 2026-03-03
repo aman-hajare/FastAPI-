@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest   ### ubuntu is os we provide any os where we want to run
     steps:
       - name: pulling  git repo
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
       - name: say hi to Aman
         run: echo "Hello Aman"
