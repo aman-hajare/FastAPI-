@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     database_port: int
     database_password: str 
     database_name: str 
+    database_test_name: str
     database_username: str 
     secret_key: str 
     algorithm: str
