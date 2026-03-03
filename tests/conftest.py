@@ -8,7 +8,7 @@ import pytest
 from app.oauth2 import create_access_token
 from app import models
 
-SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}_test' ###'{settings.database_name}_test' = database name olddatabase+_test = fastapi_test
+SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}' ###'{settings.database_name}_test' = database name olddatabase+_test = fastapi_test
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
@@ -99,5 +99,4 @@ def test_posts(test_user, session, test_user2):
     #                  models.Post(title="2nd title", content="2nd content", owner_id=test_user['id']),
     #                  models.Post(title="3rd title", content="3rd content", owner_id=test_user['id'])])
     session.commit()
-    session.query(models.Post).all()
     return posts
