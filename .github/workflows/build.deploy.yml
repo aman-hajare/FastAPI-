@@ -7,6 +7,15 @@ jobs:
     runs-on: ubuntu-latest   ### ubuntu is os we provide any os where we want to run
     steps:
       - name: pulling  git repo
-        uses: actions/checkout@v2
-      - name: say hi to Aman
-        run: echo "Hello Aman"
+        uses: actions/checkout@v4
+      - name: Install python version 3.11
+        run: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: update pip
+        run: pyhon -m pip install --upgrade pip
+      - name: install all dependencies
+        run: pip install -r requirements.txt
+        
+
+      
